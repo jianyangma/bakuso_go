@@ -1,0 +1,1 @@
+# bakuso_go
