@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Game Title</title>
+    <style>
+        /* Add the CSS for the dialog box here */
+        .dialog-box {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .dialog-content {
+            color: white;
+            text-align: center;
+        }
+
+        .new-record-text {
+            display: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script src="./src/main.js" type="module"></script>
+    <div id="static-assets" style="display:none;">
+        <img id="carImage" src="assets/images/car.png" />
+        <img id="carTurnLeftImage" src="assets/images/car_turn_left.png" />
+        <img id="carTurnRightImage" src="assets/images/car_turn_right.png" />
+        <audio id="music-background" src="assets/sounds/The_Chip_Life_v1.0.mp3" type="audio/mpeg" autostart="0" loop="true"></audio>
+    </div>
+
+    <!-- Add the HTML for the dialog box here -->
+    <div id="dialog-box" class="dialog-box">
+        <div id="dialog-content" class="dialog-content">
+            <p id="dialog-text" class="dialog-text">Your time: <span id="dialog-time"></span></p>
+            <p id="new-record-text" class="new-record-text">New record!</p>
+        </div>
+    </div>
+</body>
+</html>
