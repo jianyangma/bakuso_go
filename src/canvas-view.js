@@ -1,5 +1,6 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
+let button;
 
 export function drawIntroScreen() {
   context.fillStyle = "#72D7EE";
@@ -9,7 +10,7 @@ export function drawIntroScreen() {
   drawText(canvas.width / 2, (canvas.height * 3) / 4, "#fffbbc", "Maxspeed: 118 Mph", 36);
   drawText(canvas.width / 2, (canvas.height * 5) / 6, "#dbdbdb", "Best record: 0:15", 24);
 
-  const button = document.createElement("button");
+  button = document.createElement("button");
   button.textContent = "Change Car";
   button.style.position = "absolute";
   button.style.left = `${canvas.width / 2 - 50}px`;
@@ -18,6 +19,12 @@ export function drawIntroScreen() {
     console.log("Button Clicked!");
   });
   document.body.appendChild(button);
+}
+
+export function clearIntroScreen() {
+  if (button && button.parentNode) {
+    button.parentNode.removeChild(button); // Remove the button from the DOM
+  }
 }
 
 export function drawShape(shape) {

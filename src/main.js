@@ -1,4 +1,4 @@
-import { drawIntroScreen, drawShape } from "./canvas-view.js";
+import { drawIntroScreen, drawShape, clearIntroScreen } from "./canvas-view.js";
 import { LANES, SEGMENT_LENGTH, FPS, SHAKE_INTENSITY, MAX_SPEED, DRAW_DISTANCE } from "./config.js";
 import { calculateNewPlayerHorizontalPosition, calculateNewSpeed, getCarImage } from "./controls.js";
 import { createRoadSegments, convertZPositionRoadTo2dCoords } from "./road.js";
@@ -39,6 +39,7 @@ function handleKeyPress(event) {
 function startGameEventListener() {
   startTime = Date.now();
   window.removeEventListener("keydown", startGameEventListener);
+  clearIntroScreen();
   playBackgroundMusic();
   setInterval(() => {
     requestAnimationFrame(renderLoop);
