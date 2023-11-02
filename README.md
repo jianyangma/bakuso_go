@@ -21,7 +21,7 @@ This game does not use any libraries or dependencies.
 ## Next Features
 
 - Mint and Host NFTs on Astar Network (coming soon feature)
-- Integrate with Google Maps to identify places of interests and distance travled
+- Integrate with Google Maps to identify places of interests and distance traveled
 - Deploy smart contracts for recording player's points and leaderboard information
 - Add car stats and sticker bonus
 - Trading system with friends
