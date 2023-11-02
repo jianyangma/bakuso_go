@@ -4,10 +4,20 @@ const context = canvas.getContext("2d");
 export function drawIntroScreen() {
   context.fillStyle = "#72D7EE";
   context.fillRect(0, 0, canvas.width, canvas.height);
-  drawText(canvas.width / 2, canvas.height / 3, "#dbfaff", "Retro Racer");
-  drawText(canvas.width / 2, (canvas.height * 2) / 3, "#fffbbc", "Hold 'W' to accelerate", 36);
-  drawText(canvas.width / 2, (canvas.height * 3) / 4, "#fffbbc", "Press 'A' or 'D' to turn", 36);
-  drawText(canvas.width / 2, (canvas.height * 5) / 6, "#dbdbdb", "Press any key to begin", 24);
+  drawText(canvas.width / 2, canvas.height / 3, "#dbfaff", "Bakuso Go!");
+  drawText(canvas.width / 2, (canvas.height * 2) / 3, "#fffbbc", "Current Car: Mazda Miata 94'", 36);
+  drawText(canvas.width / 2, (canvas.height * 3) / 4, "#fffbbc", "Maxspeed: 118 Mph", 36);
+  drawText(canvas.width / 2, (canvas.height * 5) / 6, "#dbdbdb", "Best record: 0:15", 24);
+
+  const button = document.createElement("button");
+  button.textContent = "Change Car";
+  button.style.position = "absolute";
+  button.style.left = `${canvas.width / 2 - 50}px`;
+  button.style.top = `${canvas.height - 25}px`;
+  button.addEventListener("click", () => {
+    console.log("Button Clicked!");
+  });
+  document.body.appendChild(button);
 }
 
 export function drawShape(shape) {
