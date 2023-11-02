@@ -6,7 +6,7 @@ This project is for the web3 Global Hackathon.
 
 Theme: Drive to Earn, Use to Fun
 
-![demo preview](./preview.gif?raw=true)
+![demo preview](./demo.gif?raw=true)
 
 ## Development notes
 
